@@ -9,7 +9,8 @@ const DiscographySchema = new mongoose.Schema({
     type: {},
     genre: {},
     date:{},
-    description:{}
+    description:{},
+    picture:{}
 })
 
 module.exports = mongoose.model('Discography', DiscographySchema)

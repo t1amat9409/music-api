@@ -5,7 +5,8 @@ const SongSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId, 
         ref: 'Discography'
     },
-    title: {}
+    title: {},
+    url:{}
 })
 
 module.exports = mongoose.model('Song', SongSchema)
