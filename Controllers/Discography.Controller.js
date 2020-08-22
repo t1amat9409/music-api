@@ -2,7 +2,7 @@ const Discography = require('../Models/Discography.Model')
 const controller = {}
 
 controller.get = (req,res) =>{
-    Discography.find().then(discographies =>{
+    Discography.find().populate('artist').then(discographies =>{
         res.status(200).json({data:discographies,message:'Discographies found'})
     }).catch(e =>{
         res.status(500).json({error:e})

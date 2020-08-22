@@ -6,6 +6,7 @@ const app = express()
 const port = process.env.PORT || 5000
 const artistsRoutes = require('./Routes/Artist.Routes')
 const discographyRoutes = require('./Routes/Discography.Routes')
+const songRoutes = require('./Routes/Song.Routes')
 
 app.use(cors())
 app.use(express.json({limit: '50mb'}))
@@ -20,6 +21,7 @@ app.get('/',(req,res) =>{
 
 app.use('/artists',artistsRoutes)
 app.use('/discography',discographyRoutes)
+app.use('/songs',songRoutes)
 
 app.listen(port,()=>{
     console.log('app running...')
