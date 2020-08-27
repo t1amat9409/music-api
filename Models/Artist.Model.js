@@ -10,7 +10,8 @@ const ArtistSchema = new mongoose.Schema({
     instagram:{},
     about: {},
     picture:{},
-    city:{}
+    city:{},
+    points: {}
 })
 
 module.exports = mongoose.model('Artist', ArtistSchema)
